@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { graphql, PageProps } from "gatsby"
 import Layout from "../components/layout"
-import PortfolioItem from "../components/item-portfolio"
+import PortfolioItem from "../components/Portfolio"
 import Pagination from "../components/pagination"
 import { PortfolioListQuery } from "./__generated__/PortfolioListQuery"
 

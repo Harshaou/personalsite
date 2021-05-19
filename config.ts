@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: `Elemental`,
+    title: `Harshad M`,
     siteUrl: `http://localhost`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
@@ -46,7 +46,7 @@ const siteMetadata = {
         },
         {
             name: "GitHub",
-            url: "https://github.com/Harshaou",
+            url: "https://github.com/harshaou",
         },
     ],
     social: [

@@ -3,6 +3,7 @@ import ScrollIntoView from "react-scroll-into-view"
 import Layout from "../layout"
 import { Button } from "../ui"
 import { ArrowRight } from "react-feather"
+import VideoPlayer from './VideoPlayer'
 
 
 
@@ -78,6 +79,7 @@ const Banner = ({ data }) => {
                         alt=""
                         className="h-full w-auto max-w-none lg:h-auto lg:w-full"
                     />
+                    {/* <VideoPlayer /> */}
                 </div>
                 <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
                     {innerComponents}

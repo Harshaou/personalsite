@@ -3,7 +3,7 @@ import { graphql, PageProps } from "gatsby"
 
 import Layout from "../components/layout"
 
-import ItemPortfolio from "../components/item-portfolio"
+import Portfolio from "../components/Portfolio"
 import ItemBlog from "../components/item-blog"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 import Wall from '../components/Home/Banner'
@@ -29,7 +29,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             <About data={siteData.about} />}
             <div className="px-4 lg:px-0" id="portfolio">
             {data.portfolio.edges.map((item, _) => (
-                <ItemPortfolio
+                <Portfolio
                     data={item.node}
                     key={`p-item-index-${item.node.id}`}
                     even={(_ + 1) % 2 === 0} />

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react"
-import { Button } from "./ui"
+import { Button } from "../ui"
 import Img from "gatsby-image"
 import { ArrowRight } from "react-feather"
 
-import Parallax from "../utils/parallax"
-import { IndexPageQuery_portfolio_edges_node } from "../pages/__generated__/IndexPageQuery"
+import Parallax from "../../utils/parallax"
+import { IndexPageQuery_portfolio_edges_node } from "../../pages/__generated__/IndexPageQuery"
 
 type ItemPortfolioProps = { data: IndexPageQuery_portfolio_edges_node, even: boolean };
 export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
