@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react'
 import ScrollIntoView from "react-scroll-into-view"
-import Layout from "../layout"
-import { Button } from "../ui"
+import Layout from "../SmallComponets/layout"
+import { Button } from "../SmallComponets/ui"
 import { ArrowRight } from "react-feather"
 import VideoPlayer from './VideoPlayer'
 

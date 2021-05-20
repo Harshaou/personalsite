@@ -7,7 +7,6 @@ import Parallax from "../../utils/parallax"
 import { IndexPageQuery_portfolio_edges_node } from "../../pages/__generated__/IndexPageQuery"
 
 type ItemPortfolioProps = { data: IndexPageQuery_portfolio_edges_node, even: boolean };
-
 export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
     const [state, changeState] = useState({
         animated: false,
@@ -38,8 +37,6 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
 
     let transform = useRef(0);
 
-    console.log('trans', state.percentage)
-
     useEffect(() => {
         transform.current = Math.min(getWindowHeight() / 2, 300) * Math.max(0, state.percentage - percentageThreshold);
         
@@ -53,7 +50,6 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
 
     if (state.percentage > percentageThreshold && !state.animated)
         updateState({ animated: true })
-
 
     return (
         <Parallax changePercentage={updateState}>

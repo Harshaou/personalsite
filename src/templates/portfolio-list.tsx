@@ -1,8 +1,8 @@
 import React, { useEffect } from "react"
 import { graphql, PageProps } from "gatsby"
-import Layout from "../components/layout"
-import PortfolioItem from "../components/Portfolio"
-import Pagination from "../components/pagination"
+import Layout from "../components/SmallComponets/layout"
+import PortfolioItem from "../components/SmallComponets/portfolioList"
+import Pagination from "../components/SmallComponets/pagination"
 import { PortfolioListQuery } from "./__generated__/PortfolioListQuery"
 
 export default function portfolioList({ data, pageContext, location }: PageProps<PortfolioListQuery, {}>) {

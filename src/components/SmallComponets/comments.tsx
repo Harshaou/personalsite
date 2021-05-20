@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Disqus } from "gatsby-plugin-disqus"
 import { CommentsQuery } from "./__generated__/CommentsQuery"
 import { WindowLocation } from "@reach/router"
-import store from "../utils/store"
+import store from "../../utils/store"
 
 type CommentsProps = { title: string; location: WindowLocation<{}> }
 const Comments: React.FC<CommentsProps> = ({ title, location }) => {

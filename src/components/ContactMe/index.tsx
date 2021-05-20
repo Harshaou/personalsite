@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Description as ContactDescription } from "../contact"
+import { Form, Description as ContactDescription } from "../SmallComponets/contact"
 
 function index({ data }) {
     const hasContactForm = data.api_url
