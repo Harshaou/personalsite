@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from "react"
-import { Button } from "../SmallComponets/ui"
+import { Button } from "../components/SmallComponets/ui"
 import Img from "gatsby-image"
 import { ArrowRight } from "react-feather"
 
-import Parallax from "../../utils/parallax"
-import { IndexPageQuery_portfolio_edges_node } from "../../pages/__generated__/IndexPageQuery"
+import Parallax from "../utils/parallax"
+import { IndexPageQuery_portfolio_edges_node } from "../pages/__generated__/IndexPageQuery"
 
 type ItemPortfolioProps = { data: IndexPageQuery_portfolio_edges_node, even: boolean };
 
-export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
+export const ItemPortfolio = () => {
     const [state, changeState] = useState({
         animated: false,
         percentage: 0,
@@ -60,7 +60,7 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
                 <div
                     className={`my-4 py-8 lg:py-24 portfolio-item md:flex ${
                         state.animated ? "begin-animation" : ""
-                    } ${even ? "even flex-row-reverse" : ""}`}
+                    } ${1 ? "even flex-row-reverse" : ""}`}
                 >
                     <div className="relative flex-1">
                         <div
@@ -69,29 +69,29 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
                                 transform: `translate(0px,${transform.current}px)`,
                             }}
                         >
-                            <Img
+                            {/* <Img
                                 fluid={
                                     data.frontmatter.image.childImageSharp.fluid
                                 }
                                 alt={data.frontmatter.title}
-                            />
+                            /> */}
                         </div>
                     </div>
                     <div className="flex-1 flex md:px-4 lg:px-6 items-center">
                         <div
                             className={`flex flex-1 flex-wrap  ${
-                                even ? "md:justify-end md:text-right" : ""
+                                2 ? "md:justify-end md:text-right" : ""
                             }`}
                         >
                             <h3 className="text-color-1 text-5xl font-black to-up">
-                                {data.frontmatter.title}
+                                Rough title
                             </h3>
                             <p className="lg:mt-4 to-up">
-                                {data.frontmatter.description}
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, corporis repellendus. Necessitatibus voluptates consectetur deleniti exercitationem et molestiae velit magni. 
                             </p>
                             <Button
-                                to={data.fields.slug}
-                                label={`View ${data.frontmatter.title}`}
+                                to=""
+                                label={`View ${"mmoioim"}`}
                                 title={"View"}
                                 iconRight={<ArrowRight />}
                             />

@@ -72,6 +72,8 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
             })
         })
 
+        
+
         const blogPosts = result.data.blog.edges
         const blogPostsPerPage =
             result.data.limitPost.siteMetadata.blogItemsPerPage
