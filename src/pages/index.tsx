@@ -3,7 +3,7 @@ import { graphql, PageProps } from "gatsby"
 
 import Layout from "../components/SmallComponets/layout"
 
-import Portfolio from "../components/Portfolio"
+import Portfolio from "../components/PortfolioItem"
 import ItemBlog from "../components/SmallComponets/item-blog"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 import Wall from '../components/Home/Banner'
