@@ -27,6 +27,10 @@ const siteMetadata = {
             url: "/about",
         },
         {
+            name: "INTERESTS",
+            url: "/interests",
+        },
+        {
             name: "BLOG",
             url: "/blog",
         },
@@ -51,25 +55,31 @@ const siteMetadata = {
     ],
     social: [
         {
-            name: "Facebook",
-            icon: "/images/Facebook.svg",
-            url: "#",
-        },
-        {
             name: "Twitter",
-            icon: "/images/Twitter.svg",
-            url: "#",
+            icon: "/images/twitter.svg",
+            url: "https://twitter.com/_bornin90s",
         },
         {
-            name: "Instagram",
-            icon: "/images/Instagram.svg",
-            url: "#",
+            name: "Github",
+            icon: "/images/github.svg",
+            url: "https://github.com/Harshaou",
         },
         {
-            name: "Youtube",
-            icon: "/images/Youtube.svg",
-            url: "#",
+            name: "Medium",
+            icon: "/images/medium.svg",
+            url: "https://harsh-haou.medium.com/",
         },
+        {
+            name: "Linkedin",
+            icon: "/images/linkedin.svg",
+            url: "https://www.linkedin.com/in/harshhaou",
+        },
+        {
+            name: "Telegram",
+            icon: "/images/telegram.svg",
+            url: "https://t.me/Harshad_M",
+        },
+        
     ],
     contact: {
         // leave empty ('') or false to hide form

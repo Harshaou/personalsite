@@ -18,11 +18,13 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
         message: "",
     })
 
-    const [feedback, setFeedback] = useState<FeedbackState>({})
+    const [feedback, setFeedback] = useState<FeedbackState>({}) 
 
     const [ transactionState, setTransactionState] = useState(false);
 
     const updateData = v => changeData({ ...data, ...v })
+
+
 
     return (
         <form
@@ -145,7 +147,9 @@ const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = 
     return (
         <div>
             {data.description && (
-                <p className="text-color-default">{data.description}</p>
+                <p className="text-color-default">
+                    Connect me on social networks
+                </p>
             )}
             <ul className="my-4">
                 {data.mail && (
@@ -163,8 +167,8 @@ const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = 
                         <span className="text-secondary icon">
                             <Phone />
                         </span>
-                        <a className="ml-4" href={"tel:" + data.phone}>
-                            {data.phone}
+                        <a className="ml-4" href={"tel:" + +919747166069}>
+                         +91 9747166069
                         </a>
                     </li>
                 )}
@@ -173,7 +177,9 @@ const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = 
                         <span className="mt-1 text-secondary icon">
                             <MapPin />
                         </span>
-                        <p className="whitespace-pre ml-4">{data.address}</p>
+                        <p className="whitespace-pre ml-4">
+                            Kochi - India
+                        </p>
                     </li>
                 )}
                 <li>

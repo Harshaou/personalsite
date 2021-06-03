@@ -3,7 +3,7 @@ import { graphql, PageProps } from "gatsby"
 
 import Layout from "../components/SmallComponets/layout"
 
-import Portfolio from "../components/PortfolioItem"
+import Portfolio from "../components/WorksSection"
 import ItemBlog from "../components/SmallComponets/item-blog"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 import Wall from '../components/Home/Banner'
@@ -28,12 +28,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             {siteData.about !== "" && 
             <About data={siteData.about} />}
             <div className="px-4 lg:px-0" id="portfolio">
-            {data.portfolio.edges.map((item, _) => (
-                <Portfolio
-                    data={item.node}
-                    key={`p-item-index-${item.node.id}`}
-                    even={(_ + 1) % 2 === 0} />
-                ))}
+                <Portfolio />
             </div>
             <Blog> 
                 {data.blog.edges.map(item => (
@@ -71,30 +66,6 @@ export const query = graphql`
                     name
                     url
                     icon
-                }
-            }
-        }
-        portfolio: allMdx(
-            filter: { fields: { sourceName: { eq: "portfolio" } } }
-            limit: 6
-        ) {
-            edges {
-                node {
-                    id
-                    frontmatter {
-                        title
-                        description
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 1000) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
-                    }
-                    fields {
-                        slug
-                    }
                 }
             }
         }

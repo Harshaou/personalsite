@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from "react"
-import { Button } from "../components/SmallComponets/ui"
-import Img from "gatsby-image"
+import { Button } from "../SmallComponets/ui"
 import { ArrowRight } from "react-feather"
 
-import Parallax from "../utils/parallax"
-import { IndexPageQuery_portfolio_edges_node } from "../pages/__generated__/IndexPageQuery"
+import Parallax from "../../utils/parallax"
+import { IndexPageQuery_portfolio_edges_node } from "../../pages/__generated__/IndexPageQuery"
 
-type ItemPortfolioProps = { data: IndexPageQuery_portfolio_edges_node, even: boolean };
+
 
 export const ItemPortfolio = () => {
     const [state, changeState] = useState({
@@ -53,14 +52,29 @@ export const ItemPortfolio = () => {
     if (state.percentage > percentageThreshold && !state.animated)
         updateState({ animated: true })
 
+    const pages = [
+        {
+            img: "https://images.unsplash.com/photo-1622525719754-e03c615c8624?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80",
+            title: 'skills',
+            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptates sapiente est fugit quibusdam eligendi quo natus animi.",
+            even: true,
+        },
+        {
+            img: "https://images.unsplash.com/photo-1581922825485-9a9bdb7273e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80",
+            title: 'view works',
+            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptates sapiente est fugit quibusdam eligendi quo natus animi.",
+            even: false,
+        }
+    ]
 
     return (
         <Parallax changePercentage={updateState}>
-            <div className="large-container mx-auto">
+            {pages.map((item, _) => (
+                <div key={_} className="large-container mx-auto">
                 <div
                     className={`my-4 py-8 lg:py-24 portfolio-item md:flex ${
                         state.animated ? "begin-animation" : ""
-                    } ${1 ? "even flex-row-reverse" : ""}`}
+                    } ${ (_ + 1) % 2 === 0 ? "even flex-row-reverse" : ""}`}
                 >
                     <div className="relative flex-1">
                         <div
@@ -69,29 +83,24 @@ export const ItemPortfolio = () => {
                                 transform: `translate(0px,${transform.current}px)`,
                             }}
                         >
-                            {/* <Img
-                                fluid={
-                                    data.frontmatter.image.childImageSharp.fluid
-                                }
-                                alt={data.frontmatter.title}
-                            /> */}
+                            <img style={{height: 800, width: '100%',}} src={item.img} alt={item.title}  />
                         </div>
                     </div>
                     <div className="flex-1 flex md:px-4 lg:px-6 items-center">
                         <div
                             className={`flex flex-1 flex-wrap  ${
-                                2 ? "md:justify-end md:text-right" : ""
+                                (_ + 1) % 2 === 0 ? "md:justify-end md:text-right" : ""
                             }`}
                         >
                             <h3 className="text-color-1 text-5xl font-black to-up">
-                                Rough title
+                                {item.title}
                             </h3>
                             <p className="lg:mt-4 to-up">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, corporis repellendus. Necessitatibus voluptates consectetur deleniti exercitationem et molestiae velit magni. 
+                                {item.description}
                             </p>
                             <Button
-                                to=""
-                                label={`View ${"mmoioim"}`}
+                                to={`/about`}
+                                label={`View ${'llllll'}`}
                                 title={"View"}
                                 iconRight={<ArrowRight />}
                             />
@@ -99,6 +108,7 @@ export const ItemPortfolio = () => {
                     </div>
                 </div>
             </div>
+            ))}
         </Parallax>
     )
 }
