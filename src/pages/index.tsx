@@ -1,15 +1,18 @@
 import React, { useEffect, useRef, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 
-import Layout from "../components/SmallComponets/layout"
+import Layout from "../components/Common/layout"
 
 import Portfolio from "../components/WorksSection"
-import ItemBlog from "../components/SmallComponets/item-blog"
+import ItemBlog from "../components/Common/item-blog"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 import Wall from '../components/Home/Banner'
 import About from '../components/About'
 import Blog from '../components/Blog'
 import Contact from '../components/ContactMe'
+
+// Render a YouTube video player
+
 
 export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const siteData = data.site.siteMetadata

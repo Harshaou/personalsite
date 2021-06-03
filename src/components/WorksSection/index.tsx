@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
-import { Button } from "../SmallComponets/ui"
+import { Button } from "../Common/ui"
 import { ArrowRight } from "react-feather"
 
 import Parallax from "../../utils/parallax"
