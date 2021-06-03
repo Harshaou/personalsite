@@ -1,11 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Twitter, GitHub } from "react-feather"
 
 const ListItem = ({ data }) => {
     return (
         <li className="inline-block social-link mx-2">
             <a href={data.url} title={data.name} className="rounded-full inline-block transition-shadow duration-300 hover:shadow-2xl">
-                <img src={data.icon} alt={data.name} className="block w-16"/>
+                <img src={data.icon} alt={data.name} className="block w-6"/>
             </a>
         </li>
     )

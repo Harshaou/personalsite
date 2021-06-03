@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import Layout from "../components/layout"
-import BlogItem from "../components/item-blog"
-import Pagination from "../components/pagination"
+import Layout from "../components/SmallComponets/layout"
+import BlogItem from "../components/SmallComponets/item-blog"
+import Pagination from "../components/SmallComponets/pagination"
 import { BlogListQuery } from "./__generated__/BlogListQuery"
 
 export default function blogList({ data, pageContext, location }: PageProps<BlogListQuery, {}>) {

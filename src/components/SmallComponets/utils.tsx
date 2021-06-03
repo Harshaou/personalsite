@@ -12,7 +12,7 @@ const Logo = ({ className = "logo" }) => {
                     logo
                 }
             }
-        }
+        } 
     `)
 
     return (
