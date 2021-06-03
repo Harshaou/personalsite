@@ -1,7 +1,7 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import { graphql, PageProps } from "gatsby"
-import Layout from "../components/SmallComponets/layout"
+import Layout from "../components/Common/layout"
 import Img from "gatsby-image"
 import { Calendar } from "react-feather"
 import { MDXRenderer } from "gatsby-plugin-mdx"

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import Portfolio from "../components/PortfolioItem"
-import Layout from "../components/SmallComponets/layout"
+import Layout from "../components/Common/layout"
 import { PortfolioQuery } from "./__generated__/PortfolioQuery"
 
 export default ({data, location}: PageProps<PortfolioQuery, {}>) => {

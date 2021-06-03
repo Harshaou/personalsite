@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Send, Mail, Phone, MapPin, Loader } from "react-feather"
-
+import { navigate } from 'gatsby'
 import { TextInput, Button } from "./ui"
 
 
@@ -25,7 +25,6 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
     const updateData = v => changeData({ ...data, ...v })
 
 
-
     return (
         <form
             onSubmit={event => {
@@ -33,6 +32,9 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 setTransactionState(true);
 
                 const validate = beforeContactFormSubmit(data);
+
+                
+
 
                 if (validate.result) {
                     setFeedback({});
@@ -45,6 +47,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                                         "Your message has been sent.",
                                 },
                             })
+                            navigate('/thankyou')
                         } else {
                             setFeedback({
                                 4: {
@@ -141,6 +144,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
             </div>
         </form>
     )
+  
 }
 
 const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = ({ data }) => {

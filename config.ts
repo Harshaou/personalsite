@@ -149,7 +149,9 @@ const contactFormSubmit = async (api, data) => {
 
     res = await res.json()
 
-    if (res.success) {
+   
+
+    if (res.ok) {
         return {
             result: true,
         }

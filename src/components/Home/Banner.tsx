@@ -1,9 +1,9 @@
 import React, {useRef, useEffect, useState} from 'react'
 import ScrollIntoView from "react-scroll-into-view"
-import Layout from "../SmallComponets/layout"
-import { Button } from "../SmallComponets/ui"
+import Layout from "../Common/layout"
+import { Button } from "../Common/ui"
 import { ArrowRight } from "react-feather"
-import VideoPlayer from './VideoPlayer'
+import VideoPlayer from '../Common/VideoPlayer'
 
 
 
@@ -79,7 +79,7 @@ const Banner = ({ data }) => {
                         alt=""
                         className="h-full w-auto max-w-none lg:h-auto lg:w-full"
                     />
-                    {/* <VideoPlayer /> */}
+            
                 </div>
                 <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
                     {innerComponents}

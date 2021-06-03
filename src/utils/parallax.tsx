@@ -5,8 +5,6 @@ export function canUseDOM() {
   return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 }
 
-console.log('oooo',canUseDOM())
-
 type ParallaxProps = { changePercentage: ({ percentage: number }) => void };
 
 export default class Parallax extends React.Component<ParallaxProps> {

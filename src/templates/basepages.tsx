@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, PageProps } from "gatsby";
-import Layout from "../components/SmallComponets/layout";
+import Layout from "../components/Common/layout";
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { BasePagesQuery } from "./__generated__/BasePagesQuery";

@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/SmallComponets/layout"
+import Layout from "../components/Common/layout"
 import { PageProps } from "gatsby";
 
 export default ({ location }: PageProps<{}, {}>) => {
