@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Button } from "../Common/ui"
 import { ArrowRight } from "react-feather"
-
+import Vimeo from '@u-wave/react-vimeo';
 import Parallax from "../../utils/parallax"
 import { IndexPageQuery_portfolio_edges_node } from "../../pages/__generated__/IndexPageQuery"
 
@@ -76,16 +76,23 @@ export const ItemPortfolio = () => {
                         state.animated ? "begin-animation" : ""
                     } ${ (_ + 1) % 2 === 0 ? "even flex-row-reverse" : ""}`}
                 >
-                    <div className="relative flex-1">
+                    <div className="relative flex">
                         <div
-                            className="image relative z-10"
+                            className="image relative z-10 flex "
                             style={{
                                 transform: `translate(0px,${transform.current}px)`,
                             }}
                         >
-                            <img style={{height: 800, width: '100%',}} src={item.img} alt={item.title}  />
+                          <img style={{width: '100%'}} src={item.img} alt="tt" />
+                            {/* <Vimeo
+                                style={{width: 300,}}
+                                video="https://vimeo.com/558492515"
+                                autoplay
+                                /> */}
                         </div>
                     </div>
+                        
+
                     <div className="flex-1 flex md:px-4 lg:px-6 items-center">
                         <div
                             className={`flex flex-1 flex-wrap  ${

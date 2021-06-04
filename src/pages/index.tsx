@@ -11,7 +11,7 @@ import About from '../components/About'
 import Blog from '../components/Blog'
 import Contact from '../components/ContactMe'
 
-// Render a YouTube video player
+
 
 
 export default ({ data, location }: PageProps<IndexPageQuery>) => {
@@ -33,6 +33,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             <div className="px-4 lg:px-0" id="portfolio">
                 <Portfolio />
             </div>
+
             <Blog> 
                 {data.blog.edges.map(item => (
                     <ItemBlog data={item.node} key={`b-item-index-${item.node.id}`} />
