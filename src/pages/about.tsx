@@ -29,14 +29,26 @@ export default ({ location }) => {
                 <div className="title py-12 text-center">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">About</h2>
 
-                <div className="flex px-4 lg:px-24 md:px-8 pb-12">
-                <div className="flex items-center mx-4"><span className="mx-1"><FaLaptop /></span>Web Dev</div>
-                <div className="flex items-center mx-4"><span className="mx-1">🚀</span> Startups</div>
-                <div className="flex items-center mx-4"><span className="mx-1"><FaBitcoin /></span> Bitcoin</div>
-                <div className="flex items-center mx-4"><span className="mx-1">🌎</span>  Decentralization </div>
-                <div className="flex items-center mx-4"><span className="mx-1"><FaEthereum /></span> Etherum</div>
-                <div className="flex items-center mx-4"><span className="mx-1"><GiHappySkull /></span>Mindfullness</div> 
-            </div>
+                <div className="grid grid-cols-2 gap-4 md:hidden">
+                    <div className="flex items-center mx-4"><span className="mx-1"><FaLaptop /></span>Web Dev</div>
+                    <div className="flex items-center mx-4"><span className="mx-1">🚀</span> Startups</div>
+                    <div className="flex items-center mx-4"><span className="mx-1"><FaBitcoin /></span> Bitcoin</div>
+                    <div className="flex items-center mx-4"><span className="mx-1"><FaEthereum /></span> Etherum</div>
+                    <div className="flex items-center mx-4"><span className="mx-1"><GiHappySkull /></span>Mindfullness</div>
+                    <div className="flex items-center mx-4"><span className="mx-1">🌎</span>  Decentralization </div>
+                     
+                </div>
+
+                <div className="hidden md:flex px-4 lg:px-24 md:px-8 pb-12 ">
+                    <div className="flex items-center mx-4"><span className="mx-1"><FaLaptop /></span>Web Dev</div>
+                    <div className="flex items-center mx-4"><span className="mx-1">🚀</span> Startups</div>
+                    <div className="flex items-center mx-4"><span className="mx-1"><FaBitcoin /></span> Bitcoin</div>
+                    <div className="flex items-center mx-4"><span className="mx-1">🌎</span>  Decentralization </div>
+                    <div className="flex items-center mx-4"><span className="mx-1"><FaEthereum /></span> Etherum</div>
+                    <div className="flex items-center mx-4"><span className="mx-1"><GiHappySkull /></span>Mindfullness</div> 
+                </div>
+
+
 
                 </div>
 {/* 
@@ -86,10 +98,38 @@ export default ({ location }) => {
             </div> */}
             <hr className="mt-20"/>
 
-            <div className="px-4 py-16 lg:py-32 lg:px-0 ">
+            <div className="md:hidden px-4 py-16 lg:py-32 lg:px-0 ">
             <h2 className="font-black text-center text-5xl text-color-1">Skills</h2>
-            <div className="flex justify-center ">
-                <div className="flex items-center gap-20 py-12"> 
+            <div className="flex flex-col justify-center ">
+                <div className="flex flex-col items-center gap-20 py-12"> 
+                    <div style={{width: 300}} className="p-24 rounded-xl w-4/4 border-solid border-4" >
+                        <h5>Soft Skills</h5>
+                        {softSkills.map(item => (
+                            <div className="flex items-center">
+                                <BsDot size={20} />
+                                <p>{item}</p>
+                            </div>
+                           
+                        ))}
+                    </div>
+                    <SiPluscodes color="goldenrod" size={80} />
+                    <div style={{width: 300}} className="p-24 rounded-xl border-solid border-4">
+                    <h5>Technical skills</h5>
+                        {techSkills.map(item => (
+                            <div className="flex items-center">
+                                <BsDot size={20} />
+                                <p>{item}</p>
+                            </div>
+                        ))}
+                    </div>  
+                </div>
+            </div>
+            </div>
+
+            <div className="hidden md:block px-4 py-16 lg:py-32 lg:px-0 ">
+            <h2 className="font-black text-center text-5xl text-color-1">Skills</h2>
+            <div className="md:flex justify-center ">
+                <div className="md:flex items-center gap-20 py-12"> 
                     <div style={{width: 400}} className="p-24 rounded-xl w-4/4 border-solid border-4" >
                         <h5>Soft Skills</h5>
                         {softSkills.map(item => (
@@ -113,20 +153,7 @@ export default ({ location }) => {
                 </div>
             </div>
             </div>
-
-            {/* <div className="px-4 py-16 lg:py-32 lg:px-0">
-            <h2 className="font-black text-center text-5xl text-color-1">Things I'm Interested</h2>
-            <div className="flex ">
-                <div className="flex items-center mx-4"><span className="mx-1">🚀</span> Startups</div>
-                <div className="flex items-center mx-4"><span className="mx-1"><FaBitcoin /></span> Bitcoin</div>
-                <div className="flex items-center mx-4"><span className="mx-1">🌎</span>  Decentralization </div>
-                <div className="flex items-center mx-4"><span className="mx-1"><FaEthereum /></span> Etherum</div>
-                <div className="flex items-center mx-4"><span className="mx-1"><GiHappySkull /></span>Mindfullness</div> 
-            </div>
-            <div className="flex items-center">
-            
-            </div>
-            </div> */}
+        
         </div>
            
         </Layout>

@@ -9,7 +9,7 @@ import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 import Wall from '../components/Home/Banner'
 import About from '../components/About'
 import Blog from '../components/Blog'
-import Contact from '../components/ContactMe'
+import Contact from '../components/ContactMe' 
 
 
 
@@ -34,11 +34,11 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
                 <Portfolio />
             </div>
 
-            <Blog> 
-                {data.blog.edges.map(item => (
-                    <ItemBlog data={item.node} key={`b-item-index-${item.node.id}`} />
-                ))}
-            </Blog>
+            <div className="mt-12">
+            <Blog />
+            </div>
+
+           
             <Contact data={siteData.contact} />
 
         </Layout>

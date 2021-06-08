@@ -9,6 +9,7 @@ import { IndexPageQuery_portfolio_edges_node } from "../../pages/__generated__/I
 import { SiTailwindcss, SiReact, SiGraphql, SiJavascript, SiGatsby, SiHtml5,
     SiNextDotJs, SiTypescript, SiCss3, SiRedux, SiMongodb, SiWordpress, SiMeteor } from 'react-icons/si';
 import { AiOutlineAntDesign } from 'react-icons/ai';
+import {FaGitAlt} from 'react-icons/fa'
 
 
 
@@ -18,7 +19,8 @@ let iconItems = [
    {name: 'Redux', icon: <SiRedux size={60} color="#7c2ec9" /> }, {name: 'Next', icon: <SiNextDotJs size={60} /> },
    {name: 'Gatsby', icon: <SiGatsby size={60} color="#9146db" /> },  {name: 'GraphQl', icon: <SiGraphql size={60} color="#eb3dd3" />  },
    {name: 'AntDesign', icon: <AiOutlineAntDesign size={60} color="#22A7F0" /> }, {name: 'Tailwindcss', icon: <SiTailwindcss size={60} color="#15b4bd" /> },
-   {name: 'Wordpress', icon: <SiWordpress size={60} color="#305d82" /> }, {name: 'meteor', icon: <SiMeteor size={60} color="#305d82" />}
+   {name: 'Wordpress', icon: <SiWordpress size={60} color="#305d82" /> }, {name: 'meteor', icon: <SiMeteor size={60} color="#305d82" />},
+   {name: 'git', icon: <FaGitAlt size={60} color="#305d82" />}
 ]
 
 
@@ -75,7 +77,7 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
         updateState({ animated: true })
 
     return (
-            <div className="large-container mx-auto">
+            <div className="large-container mx-auto lg:w-11/12 mb-4">
                 <div
                     className={`my-4 py-8 lg:py-24 portfolio-item md:flex ${
                         state.animated ? "begin-animation" : ""
@@ -99,7 +101,7 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
                                 even ? "md:justify-end md:text-right" : ""
                             }`}
                         >
-                            <h3 className="text-color-1 text-5xl font-black">
+                            <h3 className="text-color-1 text-3xl font-black">
                                 {data.frontmatter.title}
                             </h3>
                             <p className="lg:mt-4">

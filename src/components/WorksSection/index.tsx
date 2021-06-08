@@ -11,12 +11,12 @@ import { FaNode, FaLaptopCode } from 'react-icons/fa';
 
 
 let iconItems = [
-    {name: 'Javascript', icon: <SiJavascript size={60} color="yellow" /> },  {name: 'Typescript', icon: <SiTypescript size={60} color="#3684e3" />, }, 
-    {name: 'React', icon: <SiReact size={60} color="#3b9cc4" /> }, {name: 'React-Native', icon: <SiReact size={60} color="#3b9cc4" /> },
-    {name: 'Redux', icon: <SiRedux size={60} color="#7c2ec9" /> }, {name: 'Next', icon: <SiNextDotJs size={60} /> },
-    {name: 'Gatsby', icon: <SiGatsby size={60} color="#9146db" /> },  {name: 'GraphQl', icon: <SiGraphql size={60} color="#eb3dd3" />  },
-    {name: 'AntDesign', icon: <AiOutlineAntDesign size={60} color="#22A7F0" /> }, {name: 'Tailwindcss', icon: <SiTailwindcss size={60} color="#15b4bd" /> }, 
-    {name: 'Node JS', icon: <FaNode  size={60} color="green" /> }, {name: 'MongoDB', icon: <SiMongodb  size={60} color="green" /> },
+    {name: 'Javascript', icon: <SiJavascript size={50} color="yellow" /> },  {name: 'Typescript', icon: <SiTypescript size={50} color="#3684e3" />, }, 
+    {name: 'React', icon: <SiReact size={50} color="#3b9cc4" /> }, {name: 'React-Native', icon: <SiReact size={50} color="#3b9cc4" /> },
+    {name: 'Redux', icon: <SiRedux size={50} color="#7c2ec9" /> }, {name: 'Next', icon: <SiNextDotJs size={50} /> },
+    {name: 'Gatsby', icon: <SiGatsby size={50} color="#9146db" /> },  {name: 'GraphQl', icon: <SiGraphql size={50} color="#eb3dd3" />  },
+    {name: 'AntDesign', icon: <AiOutlineAntDesign size={50} color="#22A7F0" /> }, {name: 'Tailwindcss', icon: <SiTailwindcss size={50} color="#15b4bd" /> }, 
+    {name: 'Node JS', icon: <FaNode  size={50} color="green" /> }, {name: 'MongoDB', icon: <SiMongodb  size={50} color="green" /> },
 ]
 
 export const ItemPortfolio = () => {
@@ -84,7 +84,7 @@ export const ItemPortfolio = () => {
     return (
         <div>
             {pages.map((item, index) => (
-                <div key={index} className="large-container mx-auto">
+                <div key={index} className="large-container mx-auto lg:w-11/12 ">
                 <div
                     className={`my-4 py-8 lg:py-24 portfolio-item md:flex ${
                         state.animated ? "begin-animation" : "" 
