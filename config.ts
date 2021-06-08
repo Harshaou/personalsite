@@ -8,11 +8,16 @@ const siteMetadata = {
     ogImage: `/images/wall.png`,
     twoColumnWall: true,
     cookiePolicy: true,
-    introTag: `PHOTOGRAPHER | VIDEOGRAPHER`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
+    introTag: ` Front-end Developer`,
+    description: ` JavaScript | TypeScript | CSS | React JS | Redux | React-Native | Gatsby JS | Next JS | GraphQL |
+    Node JS | Tailwind CSS | Bootsrap | Ant-Design | Firebase`,
     about:
-        "Cras accumsan a lectus at tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus elementum dapibus dictum. Mauris auctor quam nec est tincidunt hendrerit. Donec pulvinar lobortis mauris. Cras vulputate ullamcorper ligula a rhoncus. Nunc venenatis elementum ligula in semper. Mauris malesuada purus nunc, et ultricies leo aliquam ac. Ut sit amet nunc id magna accumsan hendrerit in eget metus.",
-    author: `@_akzhy`,
+        `I'm Harshad. I'm a React, Javascript enthusiast. I was working as a front end developer for the last 10 months in Webdura technologies.
+          At the time I'm at Webdura, I've worked with both web and mobile using React and React-native. React ecosystem is growing so rapidly, 
+          which I'm so excited about. Tools like Gatsby and Next is enabling this new kind of web. From the development experience to great performance,
+          good SEO, rich and delightful user experience.It's never been a better time to be a front end developer. I'm looking to be a part of team that
+        adapts to new changes and make use of it.`,
+    author: ``,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
     darkmode: true,
@@ -26,10 +31,10 @@ const siteMetadata = {
             name: "ABOUT",
             url: "/about",
         },
-        {
-            name: "INTERESTS",
-            url: "/interests",
-        },
+        // {
+        //     name: "INTERESTS",
+        //     url: "/interests",
+        // },
         {
             name: "BLOG",
             url: "/blog",

@@ -44,6 +44,7 @@ export const query = graphql`
           frontmatter {
             title
             description
+            stack
             image {
               childImageSharp {
                 fluid(maxWidth: 1000) {

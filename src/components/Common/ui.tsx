@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { Link } from "./utils"
 
 type ButtonProps = { title: string, to?: string, type?: any, label?: string, disabled?: boolean, iconLeft?: JSX.Element, iconRight?: JSX.Element };
+
+
 const Button: React.FC<ButtonProps> = props => {
     const { title, to, type, label, disabled } = props
 
@@ -26,6 +28,7 @@ const Button: React.FC<ButtonProps> = props => {
             return <button type={t} disabled={dis} className={`btn btn-primary${dis ? ' disabled' : ''}`}>{innerComponents}</button>
         }
     }
+    
     return (
         <Link to={to} className="btn btn-primary" title={label || title}>
             {innerComponents}

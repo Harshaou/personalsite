@@ -1,9 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react'
 import ScrollIntoView from "react-scroll-into-view"
-import Layout from "../Common/layout"
 import { Button } from "../Common/ui"
 import { ArrowRight } from "react-feather"
-import VideoPlayer from '../Common/VideoPlayer'
 
 
 
@@ -27,11 +25,15 @@ const Banner = ({ data }) => {
         }
     }, [state.loaded])
     let spanAttrs: Partial<{ style: unknown }> = {}
+
+    
     if (!twoColumnWall && data.titleImage) {
         spanAttrs.style = {
             backgroundImage: `url('${data.titleImage}')`,
         }
     }
+
+    
     const innerComponents = (
         <React.Fragment>
             <div className="title bg-bg">
@@ -45,13 +47,11 @@ const Banner = ({ data }) => {
                 </h1>
             </div>
             <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0">
-                {/* {data.introTag} */} Front-end Developer
+                {data.introTag}
             </p>
-            <p className="text-base lg:text-lg mt-4">
-                {/* {data.description} */}
-                JavaScript | TypeScript | CSS | SCSS | React JS | Redux | React-Native | Gatsby JS | Next JS | GraphQL |
-                 Node JS | Tailwind CSS | Bootsrap | Ant-Design | Firebase
-                </p>
+            <p className="text-base lg:text-lg mt-4 lg:mr-10">
+                {data.description}
+            </p>
             <ScrollIntoView selector="#portfolio">
                 <Button
                     title="SEE WORKS"
@@ -67,20 +67,23 @@ const Banner = ({ data }) => {
                 className="wall h-screen flex relative justify-center items-center overflow-hidden"
                 ref={wall}
             >
-                <div className="flex-1 lg:block absolute lg:relative w-full h-full top-0 left-0">
+                {/* <div className="flex-1 flex items-center w-full h-full lg:block absolute lg:relative  top-0 left-0"> */}
+                <div className="flex-1 flex items-center lg:block absolute lg:relative  top-0 left-0">
                     <div
                         className="absolute left-0 top-0 w-full h-full lg:hidden"
                         style={{
                             background: "rgba(0,0,0,.75)",
-                        }}
-                    ></div>
-                    <img
-                        src={data.titleImage}
-                        alt=""
-                        className="h-full w-auto max-w-none lg:h-auto lg:w-full"
-                    />
-            
+                        }} /> 
+                   
+                  
+                    <div className="lg:px-8">
+                        <img
+                            src="/images/growing.jpg"
+                            alt=""
+                            className="h-full w-auto max-w-none lg:h-auto lg:w-full rounded-2xl" /> 
+                   </div>
                 </div>
+                
                 <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
                     {innerComponents}
                 </div>

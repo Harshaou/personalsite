@@ -1,11 +1,23 @@
+
 import React, { useState, useEffect, useRef } from "react"
 import { Button } from "../Common/ui"
 import { ArrowRight } from "react-feather"
-import Vimeo from '@u-wave/react-vimeo';
-import Parallax from "../../utils/parallax"
-import { IndexPageQuery_portfolio_edges_node } from "../../pages/__generated__/IndexPageQuery"
+import ReactPlayer from 'react-player/lazy'
+import { SiTailwindcss, SiReact, SiGraphql, SiJavascript, SiGatsby, SiHtml5,
+     SiNextDotJs, SiTypescript, SiCss3, SiRedux, SiMongodb } from 'react-icons/si';
+import { AiOutlineAntDesign } from 'react-icons/ai';
+import { FaNode, FaLaptopCode } from 'react-icons/fa';
 
 
+
+let iconItems = [
+    {name: 'Javascript', icon: <SiJavascript size={60} color="yellow" /> },  {name: 'Typescript', icon: <SiTypescript size={60} color="#3684e3" />, }, 
+    {name: 'React', icon: <SiReact size={60} color="#3b9cc4" /> }, {name: 'React-Native', icon: <SiReact size={60} color="#3b9cc4" /> },
+    {name: 'Redux', icon: <SiRedux size={60} color="#7c2ec9" /> }, {name: 'Next', icon: <SiNextDotJs size={60} /> },
+    {name: 'Gatsby', icon: <SiGatsby size={60} color="#9146db" /> },  {name: 'GraphQl', icon: <SiGraphql size={60} color="#eb3dd3" />  },
+    {name: 'AntDesign', icon: <AiOutlineAntDesign size={60} color="#22A7F0" /> }, {name: 'Tailwindcss', icon: <SiTailwindcss size={60} color="#15b4bd" /> }, 
+    {name: 'Node JS', icon: <FaNode  size={60} color="green" /> }, {name: 'MongoDB', icon: <SiMongodb  size={60} color="green" /> },
+]
 
 export const ItemPortfolio = () => {
     const [state, changeState] = useState({
@@ -55,54 +67,63 @@ export const ItemPortfolio = () => {
     const pages = [
         {
             img: "https://images.unsplash.com/photo-1622525719754-e03c615c8624?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80",
-            title: 'skills',
-            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptates sapiente est fugit quibusdam eligendi quo natus animi.",
+            title: 'Skills',
+            // description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptates sapiente est fugit quibusdam eligendi quo natus animi.",
+            description: "Front end Engineer with love for React Ecosystem. Worked with CSR using create-create-app and SSR with Next and Gatby. Familiarty with Node, Exprees and MongoDb" ,
             even: true,
         },
         {
             img: "https://images.unsplash.com/photo-1581922825485-9a9bdb7273e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80",
-            title: 'view works',
-            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptates sapiente est fugit quibusdam eligendi quo natus animi.",
+            title: 'Projects',
+            description: "Front end Engineer with love for React Ecosystem. Worked with CSR using create-create-app and SSR with Next and Gatby. Familiarty with Node, Exprees and MongoDb" ,
             even: false,
         }
     ]
 
+
     return (
-        <Parallax changePercentage={updateState}>
-            {pages.map((item, _) => (
-                <div key={_} className="large-container mx-auto">
+        <div>
+            {pages.map((item, index) => (
+                <div key={index} className="large-container mx-auto">
                 <div
                     className={`my-4 py-8 lg:py-24 portfolio-item md:flex ${
-                        state.animated ? "begin-animation" : ""
-                    } ${ (_ + 1) % 2 === 0 ? "even flex-row-reverse" : ""}`}
+                        state.animated ? "begin-animation" : "" 
+                    } ${ (index + 1) % 2 === 0 ? "even flex-row-reverse" : ""}`}
                 >
-                    <div className="relative flex">
+                    <div className="relative flex-1">
                         <div
-                            className="image relative z-10 flex "
+                            className=" relative z-10"
                             style={{
                                 transform: `translate(0px,${transform.current}px)`,
                             }}
                         >
-                          <img style={{width: '100%'}} src={item.img} alt="tt" />
-                            {/* <Vimeo
-                                style={{width: 300,}}
-                                video="https://vimeo.com/558492515"
-                                autoplay
-                                /> */}
-                        </div>
+                           {index === 0 ? 
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mx-10">
+                            {iconItems.map((item, _) => (
+                                <div className= "flex flex-col items-center">
+                                <div>{item.icon}</div>
+                                <p className="mt-2">{item.name}</p>
+                                </div>
+                            ))}
+                         </div> :
+                            <div className="flex items-center justify-center">
+                                <FaLaptopCode size={200} className="rounded-full h-auto w-auto flex items-center justify-center p-20" />
+                            </div>
+                            }
+                            </div>
                     </div>
-                        
+
 
                     <div className="flex-1 flex md:px-4 lg:px-6 items-center">
                         <div
                             className={`flex flex-1 flex-wrap  ${
-                                (_ + 1) % 2 === 0 ? "md:justify-end md:text-right" : ""
+                                (index + 1) % 2 === 0 ? "md:justify-end md:text-right" : ""
                             }`}
                         >
-                            <h3 className="text-color-1 text-5xl font-black to-up">
+                            <h3 className="text-color-1 text-5xl font-black ">
                                 {item.title}
                             </h3>
-                            <p className="lg:mt-4 to-up">
+                            <p className="lg:mt-4 ">
                                 {item.description}
                             </p>
                             <Button
@@ -116,7 +137,7 @@ export const ItemPortfolio = () => {
                 </div>
             </div>
             ))}
-        </Parallax>
+        </div>
     )
 }
 

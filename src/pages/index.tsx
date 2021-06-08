@@ -83,6 +83,7 @@ export const query = graphql`
                     frontmatter {
                         title
                         description
+                        stack
                         date(formatString: "DD MMMM YYYY")
                         image {
                             childImageSharp {
