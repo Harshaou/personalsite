@@ -14,7 +14,7 @@ export default ({ location }) => {
 
     let techSkills = [
         'Javascript', 'Typescript', 'React', 'React-Native', 'Redux', 'Next','Gatsby',
-        'GraphQl', 'AntDesign', 'Tailwindcss', 'Node', 'MongoDB',
+        'GraphQl', 'AntDesign', 'Tailwindcss', 'Node',
     ]
  
     return (
