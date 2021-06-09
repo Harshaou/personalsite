@@ -20,7 +20,7 @@ export default ({ location }) => {
     return (
         <Layout
             seo={{
-                title: "Contact",
+                title: "About",
             }}
             location={location}
         >
@@ -29,17 +29,16 @@ export default ({ location }) => {
                 <div className="title py-12 text-center">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">About</h2>
 
-                <div className="grid grid-cols-2 gap-4 md:hidden">
+                <div className="grid grid-cols-2 gap-4 lg:hidden">
                     <div className="flex items-center mx-4"><span className="mx-1"><FaLaptop /></span>Web Dev</div>
                     <div className="flex items-center mx-4"><span className="mx-1">🚀</span> Startups</div>
                     <div className="flex items-center mx-4"><span className="mx-1"><FaBitcoin /></span> Bitcoin</div>
                     <div className="flex items-center mx-4"><span className="mx-1"><FaEthereum /></span> Etherum</div>
                     <div className="flex items-center mx-4"><span className="mx-1"><GiHappySkull /></span>Mindfullness</div>
                     <div className="flex items-center mx-4"><span className="mx-1">🌎</span>  Decentralization </div>
-                     
                 </div>
 
-                <div className="hidden md:flex px-4 lg:px-24 md:px-8 pb-12 ">
+                <div className="hidden lg:flex px-4 lg:px-24 md:px-8 pb-12 ">
                     <div className="flex items-center mx-4"><span className="mx-1"><FaLaptop /></span>Web Dev</div>
                     <div className="flex items-center mx-4"><span className="mx-1">🚀</span> Startups</div>
                     <div className="flex items-center mx-4"><span className="mx-1"><FaBitcoin /></span> Bitcoin</div>
@@ -47,21 +46,8 @@ export default ({ location }) => {
                     <div className="flex items-center mx-4"><span className="mx-1"><FaEthereum /></span> Etherum</div>
                     <div className="flex items-center mx-4"><span className="mx-1"><GiHappySkull /></span>Mindfullness</div> 
                 </div>
-
-
-
                 </div>
-{/* 
-            <div className="flex px-4 lg:px-24 md:px-8 pb-12">
-                <div className="flex items-center mx-4"><span className="mx-1"><FaLaptop /></span> Programing</div>
-                <div className="flex items-center mx-4"><span className="mx-1">🚀</span> Startups</div>
-                <div className="flex items-center mx-4"><span className="mx-1"><FaBitcoin /></span> Bitcoin</div>
-                <div className="flex items-center mx-4"><span className="mx-1">🌎</span>  Decentralization </div>
-                <div className="flex items-center mx-4"><span className="mx-1"><FaEthereum /></span> Etherum</div>
-                <div className="flex items-center mx-4"><span className="mx-1"><GiHappySkull /></span>Mindfullness</div> 
-            </div> */}
 
-           
 
                 <div className="post-content px-4 lg:px-24 md:px-8 ">
                     <p> I'm Harshad. I'm a React, Javascript enthusiast. I was working as a front end developer for the last 10 months in Webdura technologies.
@@ -74,31 +60,46 @@ export default ({ location }) => {
             </div>
 
             
-            {/* <div className="px-4 py-16 lg:py-32 lg:px-0 ">
-            <h2 className="font-black text-center text-5xl text-color-1">Skills</h2>
-            <div className="flex justify-center ">
-                <div className="grid grid-cols-3 gap-16 py-12">
-                    <div className=" ">
-                        <div className="bg-white p-24 rounded-xl" >
-                        {softSkills.map(item => (
-                            <p>{item}</p>
-                        ))}
-                        </div>
-                    </div>
-                    <SiPluscodes size={60} />
-
-                    <div className="bg-white p-24 rounded-xl">
-                    {techSkills.map(item => (
-                        <p>{item} </p>
-                    ))}
-                    </div>
-                        
-                </div>
-            </div>
-            </div> */}
             <hr className="mt-20"/>
 
-            <div className="md:hidden px-4 py-16 lg:py-32 lg:px-0 ">
+        <div className="md:flex flex-col items-center px-4 py-16 lg:py-32 lg:px-0 ">
+        <h2 className="font-black text-center text-5xl text-color-1">Experience</h2>
+        <div className="relative w-1/2 mt-20">
+            <div className="border-r-2 border-white absolute h-full top-0" style={{left: '15px'}} />
+            <ul className="list-none m-0 p-0">
+            <li className="mb-2">
+                <div className="flex items-center mb-1">
+                <div className="bg-white rounded-full h-8 w-8" />
+                <div className="flex-1 ml-4 font-medium">Dec 2018- Started to learn coding</div>
+                </div>
+                
+            </li>
+            <li className="mb-2">
+                <div className="flex items-center mb-1">
+                <div className="bg-white rounded-full h-8 w-8" />
+                <div className="flex-1 ml-4 font-medium">Aug 2020 - Frontend Engineer Internship</div>
+                </div>
+                <div className="ml-12">
+                Webdura Technologies
+                </div>
+            </li>
+            <li className="mb-2">
+                <div className="flex items-center mb-1">
+                <div className="bg-white rounded-full h-8 w-8" />
+                <div className="flex-1 ml-4 font-medium">Dec 2020 - Junior Frontend Engineer</div>
+                </div>
+                <div className="ml-12">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus perspiciatis facilis deserunt excepturi sunt pariatur consequuntur eveniet molestias ea quia? Magni veniam illo optio tempora modi exercitationem qui adipisci ex.
+                </div>
+            </li>
+            </ul>
+        </div>
+        </div>
+
+
+        <hr className="mt-10"/>
+
+            <div className="md:hidden px-4 py-16 lg:py-20 lg:px-0 ">
             <h2 className="font-black text-center text-5xl text-color-1">Skills</h2>
             <div className="flex flex-col justify-center ">
                 <div className="flex flex-col items-center gap-20 py-12"> 

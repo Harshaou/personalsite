@@ -34,7 +34,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
                 <Portfolio />
             </div>
 
-            <div className="mt-12">
+            <div className="mt-12 mx-12">
             <Blog />
             </div>
 
