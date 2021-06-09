@@ -101,7 +101,7 @@ const Head = ({ data }) => {
             <link
                 rel="icon"
                 href={data.site.siteMetadata.icon}
-                type="image/png"
+                type="image"
             />
             <link
                 href="https://fonts.googleapis.com/css?family=Raleway:500,800&display=swap"
