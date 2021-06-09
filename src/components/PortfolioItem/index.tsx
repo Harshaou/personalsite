@@ -6,10 +6,10 @@ import { ArrowRight } from "react-feather"
 import Parallax from "../../utils/parallax"
 import { IndexPageQuery_portfolio_edges_node } from "../../pages/__generated__/IndexPageQuery"
 
-import { SiTailwindcss, SiReact, SiGraphql, SiJavascript, SiGatsby, SiHtml5,
+import { SiTailwindcss, SiReact, SiGraphql, SiJavascript, SiGatsby, SiBootstrap,
     SiNextDotJs, SiTypescript, SiCss3, SiRedux, SiMongodb, SiWordpress, SiMeteor } from 'react-icons/si';
 import { AiOutlineAntDesign } from 'react-icons/ai';
-import {FaGitAlt} from 'react-icons/fa'
+import {FaGitAlt,FaFeatherAlt} from 'react-icons/fa'
 
 
 
@@ -20,7 +20,9 @@ let iconItems = [
    {name: 'Gatsby', icon: <SiGatsby size={60} color="#9146db" /> },  {name: 'GraphQl', icon: <SiGraphql size={60} color="#eb3dd3" />  },
    {name: 'AntDesign', icon: <AiOutlineAntDesign size={60} color="#22A7F0" /> }, {name: 'Tailwindcss', icon: <SiTailwindcss size={60} color="#15b4bd" /> },
    {name: 'Wordpress', icon: <SiWordpress size={60} color="#305d82" /> }, {name: 'meteor', icon: <SiMeteor size={60} color="#305d82" />},
-   {name: 'git', icon: <FaGitAlt size={60} color="#305d82" />}
+   {name: 'git', icon: <FaGitAlt size={60} color="#305d82" />}, {name: 'feather', icon: <FaFeatherAlt size={50}  />},
+   {name: 'mongodb', icon: <SiMongodb size={60} color="green" />}, {name: 'bootstrap', icon: <SiBootstrap size={60} color="#523c73" />}
+
 ]
 
 
@@ -29,8 +31,10 @@ type ItemPortfolioProps = { data: IndexPageQuery_portfolio_edges_node, even: boo
 export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
 
     const stacks = data.frontmatter.stack.split(",")
+    console.log('stack', stacks)
 
-    const sctackIcons = iconItems.filter(item => stacks.includes(item.name.toLowerCase()))
+    const stackIcons = iconItems.filter(item => stacks.includes(item.name.toLowerCase()))
+    console.log('stackIcons', stackIcons)
 
     const [state, changeState] = useState({
         animated: false,
@@ -86,10 +90,10 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
                     <div className="relative flex-1 flex items-center justify-center">
                         
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12 mx-10">
-                            {sctackIcons.map((item, _) => (
+                            {stackIcons.map((item, _) => (
                                 <div className= "flex flex-col items-center">
                                 <div>{item.icon}</div>
-                                <p className="mt-2">{item.name}</p>
+                                {/* <p className="mt-2">{item.name}</p> */}
                                 </div>
                             ))}
                             </div>

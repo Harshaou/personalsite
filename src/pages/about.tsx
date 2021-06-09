@@ -70,14 +70,16 @@ export default ({ location }) => {
             <li className="mb-2">
                 <div className="flex items-center mb-1">
                 <div className="bg-white rounded-full h-8 w-8" />
-                <div className="flex-1 ml-4 font-medium">Dec 2018- Started to learn coding</div>
+                <div className="flex-1 ml-4 font-medium">Dec 2018 - Began to study coding</div>
                 </div>
-                
+                <div className="ml-12">
+               HTML | CSS | JavaScript | ReactJS
+                </div>
             </li>
             <li className="mb-2">
                 <div className="flex items-center mb-1">
                 <div className="bg-white rounded-full h-8 w-8" />
-                <div className="flex-1 ml-4 font-medium">Aug 2020 - Frontend Engineer Internship</div>
+                <div className="flex-1 ml-4 font-medium">Aug 2020 - Frontend Developer Intern</div>
                 </div>
                 <div className="ml-12">
                 Webdura Technologies
@@ -86,11 +88,18 @@ export default ({ location }) => {
             <li className="mb-2">
                 <div className="flex items-center mb-1">
                 <div className="bg-white rounded-full h-8 w-8" />
-                <div className="flex-1 ml-4 font-medium">Dec 2020 - Junior Frontend Engineer</div>
+                <div className="flex-1 ml-4 font-medium">Dec 2020 - Frontend Developer</div>
                 </div>
                 <div className="ml-12">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus perspiciatis facilis deserunt excepturi sunt pariatur consequuntur eveniet molestias ea quia? Magni veniam illo optio tempora modi exercitationem qui adipisci ex.
+                I've worked with React, React-Native and Gatsby at this time
                 </div>
+            </li>
+            <li className="mb-2">
+                <div className="flex items-center mb-1">
+                <div className="bg-white rounded-full h-8 w-8" />
+                <div className="flex-1 ml-4 font-medium">May 31 2021</div>
+                </div>
+                
             </li>
             </ul>
         </div>

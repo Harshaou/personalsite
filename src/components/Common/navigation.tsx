@@ -72,11 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
                     <div className="bg-bg h-full flex flex-col justify-center relative">
                         <div className="absolute top-0 my-4 text-center w-full">
                             <Link to="/" title={data.site.siteMetadata.title} className="inline-block">
-                                <Logo
-                                    className={`duration-300 transition-all ${
-                                        scrolled ? "w-6" : "w-8"
-                                    }`}
-                                />
+                                Harshad
                             </Link>
                         </div>
                         <div className="text-center">
@@ -85,11 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
                     </div>
                 </SideBar>
                 <Link to="/" title={data.site.siteMetadata.title}>
-                    <Logo
-                        className={`duration-300 transition-all ${
-                            scrolled ? "w-6" : "w-8"
-                        }`}
-                    />
+                    Harshad
                 </Link>
                 <div className="hidden lg:block">
                     <List name="navbar" className="nav-links flex" current={currentLocation} currentTheme={currentTheme} switchTheme={switchTheme} themes={themes} withThemeSwitch={allowThemeSwitch}/>

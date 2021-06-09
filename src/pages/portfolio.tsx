@@ -12,7 +12,7 @@ export default ({data, location}: PageProps<PortfolioQuery, {}>) => {
     return (
         <Layout
             seo={{
-                title: "Contact",
+                title: "Portfolio",
             }}
             location={location}
         >

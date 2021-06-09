@@ -26,24 +26,28 @@ export default function porfolio ({ location, data }: PageProps<PortfolioQuery, 
                             data.mdx.frontmatter.banner.childImageSharp.fluid
                         }
                     />
-                    {/* <div className="flex items-center justify-center relative lg:absolute w-full h-full top-0 left-0">
-                        <div className="hidden lg:block absolute w-full h-full bg-black opacity-50"></div>
-                        <div className="px-4 py-8 lg:p-0 relative z-10 text-center text-color-default lg:text-white bg-bgalt lg:bg-transparent">
+                </div>
+
+                <div className="flex items-center justify-center relative mt-20 w-full h-full ">
+                       
+                        <div className="px-4 py-8 lg:p-0 relative text-center text-color-default lg:text-white bg-bgalt lg:bg-transparent">
                             <h1 className="text-5xl font-bold text-color-1 lg:text-white">
                                 {data.mdx.frontmatter.title}
                             </h1>
                             <p className="mt-1 flex items-center justify-center">
                                 <Calendar />{" "}
                                 <span className="ml-2">
-                                    {data.mdx.frontmatter.date}
+                                    20 Aug 2020 - 01 Dec 2020 
                                 </span>
                             </p>
                             <p className="mt-3 md:w-3/4 mx-auto">
                                 {data.mdx.frontmatter.description}
                             </p>
                         </div>
-                    </div> */}
-                </div>
+                       
+                    </div>
+
+                
                 
                 <div className="lg:w-3/4 md:w-11/12 sm:w-full p-3 mt-4 md:mt-6 mx-auto lg:mt-12">
                     <MDXProvider components={{ Row, Col }}>

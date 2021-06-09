@@ -152,7 +152,7 @@ const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = 
         <div>
             {data.description && (
                 <p className="text-color-default">
-                    Connect me on social networks
+                    Find me on social networks
                 </p>
             )}
             <ul className="my-4">

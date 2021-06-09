@@ -6,7 +6,7 @@ export default ({ location }) => {
     return (
         <Layout
             seo={{
-                title: "Contact",
+                title: "Interests",
             }}
             location={location}
         >
