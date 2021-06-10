@@ -61,7 +61,7 @@ const siteMetadata = {
     social: [
         {
             name: "Twitter",
-            icon: "/images/twitter.svg",
+            icon: "/images/img-twitter.svg",
             url: "https://twitter.com/harshaou_",
         },
         {

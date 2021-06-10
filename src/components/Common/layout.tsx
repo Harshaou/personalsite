@@ -12,7 +12,7 @@ import SEO, { SEOProps } from "../../utils/seo";
 
 import "../../style/index.css"
 import { ThemeQuery } from "./__generated__/ThemeQuery"
-import CookieBox from "./cookie";
+// import CookieBox from "./cookie";
 import store from "../../utils/store";
 
 export type Theme = { name: string, label: string, icon: JSX.Element };
@@ -87,9 +87,9 @@ export default ({ children, front, seo, navPlaceholder=true, location }: LayoutP
                     {children}
                     <Footer />
                 </div>
-                {
+                {/* {
                     (query.site.siteMetadata.cookiePolicy && !cookieShown) && <CookieBox onChange={onCookieAccept}/>
-                }
+                } */}
             </div>
         </React.Fragment>
     )
