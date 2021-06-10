@@ -172,7 +172,7 @@ const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = 
                             <Phone />
                         </span>
                         <a className="ml-4" href={"tel:" + +919747166069}>
-                         +91 9747166069
+                         +91 8848423104
                         </a>
                     </li>
                 )}
