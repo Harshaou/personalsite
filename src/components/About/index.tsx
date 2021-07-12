@@ -5,7 +5,7 @@ function index({data}) {
         <div className="boxed">
             <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    Thoghts
+                    Thoughts
                 </h2>
                 <p className="mt-5 text-lg">
                 I'm Harshad. I'm a React, Javascript enthusiast. Working as a Full-Stack Engineer at Webdura technologies.
