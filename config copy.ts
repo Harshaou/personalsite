@@ -8,9 +8,9 @@ const siteMetadata = {
     ogImage: `/images/wall.png`,
     twoColumnWall: true,
     cookiePolicy: true,
-    introTag: ` Front-end Developer`,
+    introTag: `FullStack-Engineer`,
     description: ` JavaScript | TypeScript | CSS | React JS | Redux | React-Native | Gatsby JS | Next JS | GraphQL |
-    Node JS | Tailwind CSS | Bootsrap | Ant-Design | Firebase`,
+    Node JS | Tailwind CSS | Bootsrap | Ant-Design | NodeJS | Firebase`,
     about:
         `I'm Harshad. I'm a React, Javascript enthusiast. I was working as a front end developer for the last 10 months in Webdura technologies.
           At the time I'm at Webdura, I've worked with both web and mobile using React and React-native. React ecosystem is growing so rapidly, 

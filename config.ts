@@ -8,7 +8,7 @@ const siteMetadata = {
     ogImage: `/images/growing.jpg`,
     twoColumnWall: true,
     cookiePolicy: true,
-    introTag: ` Front-end Developer`,
+    introTag: `FullStack-Engineer`,
     description: ` JavaScript | TypeScript | CSS | React JS | Redux | React-Native | Gatsby JS | Next JS | GraphQL |
     Node JS | Tailwind CSS | Bootsrap | Ant-Design | Firebase`,
     about:

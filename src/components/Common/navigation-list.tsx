@@ -43,31 +43,31 @@ const List: React.FC<NavigationListProps> = ({
         />
     ))
 
-    // if (withThemeSwitch) {
-    //     const themeButtons = themes.map((item, i) => {
-    //         const next = i !== themes.length - 1 ? i + 1 : 0
-    //         return (
-    //             <button
-    //                 className={`text-color-2 transition-transform duration-200 transform top-0 left-0 ${
-    //                     i === currentTheme ? "scale-100" : "scale-0 absolute"
-    //                 }`}
-    //                 title={`Switch to ${themes[next].label}`}
-    //                 key={`${name}-theme-switch-btn-${item.name}`}
-    //                 onClick={switchTheme}
-    //             >
-    //                 {item.icon}
-    //             </button>
-    //         )
-    //     })
-    //     list.push(
-    //         <li
-    //             className="theme-switcher"
-    //             key={`${name}-theme-switcher relative`}
-    //         >
-    //             {themeButtons}
-    //         </li>
-    //     )
-    // }
+    if (withThemeSwitch) {
+        const themeButtons = themes.map((item, i) => {
+            const next = i !== themes.length - 1 ? i + 1 : 0
+            return (
+                <button
+                    className={`text-color-2 transition-transform duration-200 transform top-0 left-0 ${
+                        i === currentTheme ? "scale-100" : "scale-0 absolute"
+                    }`}
+                    title={`Switch to ${themes[next].label}`}
+                    key={`${name}-theme-switch-btn-${item.name}`}
+                    onClick={switchTheme}
+                >
+                    {item.icon}
+                </button>
+            )
+        })
+        list.push(
+            <li
+                className="theme-switcher"
+                key={`${name}-theme-switcher relative`}
+            >
+                {themeButtons}
+            </li>
+        )
+    }
 
     return <ul className={className}>{list}</ul>
 }
