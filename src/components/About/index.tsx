@@ -8,7 +8,7 @@ function index({data}) {
                     Thoghts
                 </h2>
                 <p className="mt-5 text-lg">
-                I'm Harshad. I'm a React, Javascript enthusiast. Working as a FrontStack Engineer at Webdura technologies.
+                I'm Harshad. I'm a React, Javascript enthusiast. Working as a Full-Stack Engineer at Webdura technologies.
                 React ecosystem is growing so rapidly, 
                 which I'm so excited about. Tools like Gatsby and Next is enabling new kind of web. From the development experience to great performance,
                 good SEO, rich and delightful user experience. It's never been a better time to be a front end developer. 
