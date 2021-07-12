@@ -55,14 +55,14 @@ export default ({ location }) => {
                 which I'm so excited about. </p>
                 <p>Tools like Gatsby and Next is enabling this new kind of web. From the development experience to great performance,
                 good SEO, rich and delightful user experience.It's never been a better time to be a front end developer. I'm looking to be a part of team that
-                adapts to new changes and make use of it.</p>
+                adapts new changes and make use of it.</p>
                 </div>
             </div>
 
             
-            <hr className="mt-20"/>
+            {/* <hr className="mt-20"/> */}
 
-        <div className="md:flex flex-col items-center px-4 py-16 lg:py-32 lg:px-0 ">
+        {/* <div className="md:flex flex-col items-center px-4 py-16 lg:py-32 lg:px-0 ">
         <h2 className="font-black text-center text-5xl text-color-1">Experience</h2>
         <div className="relative w-1/2 mt-20">
             <div className="border-r-2 border-white absolute h-full top-0" style={{left: '15px'}} />
@@ -103,7 +103,7 @@ export default ({ location }) => {
             </li>
             </ul>
         </div>
-        </div>
+        </div> */}
 
 
         <hr className="mt-10"/>
