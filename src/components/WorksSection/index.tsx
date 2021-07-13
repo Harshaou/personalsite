@@ -69,14 +69,14 @@ export const ItemPortfolio = () => {
             img: "https://images.unsplash.com/photo-1622525719754-e03c615c8624?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80",
             title: 'Skills',
             // description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptates sapiente est fugit quibusdam eligendi quo natus animi.",
-            description: "Front end Engineer with love for React Ecosystem. Worked with CSR using create-create-app and SSR with Next and Gatby. Familiarty with Node, Exprees and MongoDb" ,
+            description: "Front end focused Full-Stack Engineer with love for React and Node Ecosystem. Worked with CSR using create-create-app and SSR with Next and Gatsby. Familiarty with Node, Exprees and MongoDb" ,
             even: true,
             page: 'about'
         },
         {
             img: "https://images.unsplash.com/photo-1581922825485-9a9bdb7273e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80",
             title: 'Projects',
-            description: "Front end Engineer with love for React Ecosystem. Worked with CSR using create-create-app and SSR with Next and Gatby. Familiarty with Node, Exprees and MongoDb" ,
+            description: "Front end focused Full-Stack Engineer with love for React and Node Ecosystem. Worked with CSR using create-create-app and SSR with Next and Gatsby. Familiarty with Node, Exprees and MongoDb" ,
             even: false,
             page: 'portfolio'
         }
